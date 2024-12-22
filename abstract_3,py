@@ -1,0 +1,35 @@
+from abc import ABC , abstractmethod
+class car(ABC):
+     def __init__(self, brand, model, year):
+         self.brand = brand
+         self.model = model
+         self.year = year
+
+     @abstractmethod
+     def door_count(self):
+         pass
+
+     @abstractmethod
+     def color(self):
+         pass
+
+class gari(car):
+     def __init__(self, brand, model, year,engine):
+          super().__init__(brand, model, year)
+          self.engine = engine
+
+     def door_count(self):
+          print("This car has 4 doors")
+     
+     def color(self):
+          print("This car is teracota in color")
+
+
+amar_gari= gari("buggatti","crown", 2021, "v8")
+amar_gari.door_count()
+amar_gari.color()
+
+print(amar_gari.brand)
+print(amar_gari.model)
+print(amar_gari.year)
+print(amar_gari.engine)

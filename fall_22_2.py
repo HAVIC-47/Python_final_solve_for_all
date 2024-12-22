@@ -5,7 +5,7 @@ def combination(n,r):
           return combination(n-1 ,r-1)+combination(n-1 ,r)
      
 
-n,r= 5,2
+n,r= 6,2
 print(f"combination c{n},{r} = {combination (n,r)}")
 
 
